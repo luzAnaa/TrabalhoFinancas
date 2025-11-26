@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanças</title>
+</head>
+<body>
+    <h1>Controle pessoal de finanças</h1>
+    <br>
+    
+    <label id="salario">Salário:</label>
+    <input type="text" id="salario">
+
+    <h4>Cadastro de despesas</h4>
+    <form id="formDespesas">
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+        <br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <br>
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" required>
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br>
+
+    <h2>Histórico de Despesas</h2>
+    <ul id="output"></ul>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <div id="resumo">
+        <p id="pSalario">Salário: R$</p>
+        <p id="pTDespesas">Total de despesas: R$</p>
+        <p id="pSaldo">Saldo final: R$</p>
+    </div>
+</body>
+</html>
