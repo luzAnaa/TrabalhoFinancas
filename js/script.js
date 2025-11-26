@@ -1,6 +1,7 @@
 var salario = document.getElementById("salario").value
 
 document.getElementById("formDespesas").addEventListener("submit", function(event){
+    alert("teste")
     event.preventDefault()
 
     var data = document.getElementById("data").value.format('DD/MM/YYYY')
@@ -17,7 +18,6 @@ document.getElementById("formDespesas").addEventListener("submit", function(even
     document.getElementById("formDespesas").reset()
     
     exibir_despesas()
-    atualizarSaldo()
 
 })
 
