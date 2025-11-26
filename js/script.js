@@ -1,10 +1,10 @@
 var salario = document.getElementById("salario").value
+salario = parseFloat(salario).toFixed(2)
 
 document.getElementById("formDespesas").addEventListener("submit", function(event){
-    alert("teste")
     event.preventDefault()
 
-    var data = document.getElementById("data").value.format('DD/MM/YYYY')
+    var data = document.getElementById("data").value.split('-').reverse().join('/')
     var nome = document.getElementById("nome").value
     var valor = document.getElementById("valor").value
 
@@ -16,9 +16,7 @@ document.getElementById("formDespesas").addEventListener("submit", function(even
     localStorage.setItem('listagem', JSON.stringify(historicoDespesas))
 
     document.getElementById("formDespesas").reset()
-    
     exibir_despesas()
-
 })
 
 function exibir_despesas(){
@@ -27,13 +25,8 @@ function exibir_despesas(){
     output.innerHTML = ""
     for(let i=0; i<historicoDespesas.length; i++){
         let li = document.createElement('li')
-        li.textContent = 'Data:' + historicoDespesas[i].data + ' Nome:' + historicoDespesas[i].nome + ' Valor:' + historicoDespesas[i].valor
+        historicoDespesas[i].valor = parseFloat(historicoDespesas[i].valor).toFixed(2)
+        li.textContent = 'Data: ' + historicoDespesas[i].data + '  Nome: ' + historicoDespesas[i].nome + '  Valor: R$' + historicoDespesas[i].valor
         output.appendChild(li)
     }
-}
-
-function atualizarSaldo(){
-    var pSalario = document.getElementById("pSalario")
-    var pDespesas = document.getElementById("pDespesas")
-    var pSaldo = document.getElementById("pSaldo")
 }
