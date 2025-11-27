@@ -4,31 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finanças</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Controle pessoal de finanças</h1>
     <br>
     
-    <label>Salário:</label>
-    <input type="text" id="salario">
+    <div id="cadastros">
 
-    <h4>Cadastro de despesas</h4>
-    <form id="formDespesas">
-        <label for="data">Data:</label>
-        <input type="date" id="data" required>
-        <br>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" required>
-        <br>
-        <label for="valor">Valor:</label>
-        <input type="text" id="valor" required>
-        <br>
-        <button type="submit">Cadastrar</button>
-    </form>
+        <div id="cadastroSalario">
+            <label>Salário:</label>
+            <input type="text" id="salario" required>
+            <button type="button" onclick="salvar()">Salvar/Alterar</button>
+        </div>
+
+        <form id="formDespesas">
+            <h4>Cadastro de despesas</h4>
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+            <br>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            <br>
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
     <br>
 
     <h2>Histórico de Despesas</h2>
     <ul id="output"></ul>
+    <button type="button" onclick="deletar()">Apagar Histórico</button>
 
     <div id="resumo">
     </div>
