@@ -57,7 +57,13 @@ function resumo_financeiro(){
     pTotal.textContent = 'Saldo final: R$' + saldoFinal.toFixed(2)
     resumo.appendChild(pTotal)
     
-
+    if(totalDespesas<=salario){
+        resumo.style.backgroundColor= "#00be5c"
+    }
+    else {
+        resumo.style.backgroundColor= "#d61900"
+        resumo
+    }
 
 }
 
