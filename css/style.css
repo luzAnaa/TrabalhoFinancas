@@ -1,0 +1,56 @@
+body{
+    margin: 20px;
+    background-color: #cce9e9;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+h1, h4, h2{
+    color: #015228;
+    text-shadow: #8d8d8d 2px 2px 4px;
+}
+
+#cadastros{
+    padding-left: 20px;
+    align-items: center;
+}
+
+input{
+    width: 200px;
+    height: fit-content;
+    margin-right: 10px;
+    border: 1%;
+    border-color: black;
+    border-radius: 7px;
+    font-size: 15px;
+}
+input[type="date"]{
+    text-align: center;
+    width: auto;
+}   
+
+button{
+    border-radius: 7px;
+    background-color: #00be5c;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: fit-content;
+}
+
+li{
+    margin-bottom: 10px;
+    background-color: #e6f7f7;
+    padding: 10px;
+    border-radius: 7px;
+    width: fit-content;
+}
+
+#resumo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #e6f7f7;
+    border-radius: 7px;
+    width: fit-content;
+    font-size: 20px;
+}
